@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour {
 
     private float horizontal;
     private float vertical;
-    private bool backwards;
     private int movingHashCode;
 
     // Use this for initialization
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour {
     private void Update() {
         horizontal = m_InputPlayer.horizontalAxis;
         vertical = m_InputPlayer.verticalAxis;
-        backwards = vertical > 0;
 
         if (vertical != 0 || horizontal != 0) {
             m_Animator.SetFloat("x", horizontal);
@@ -42,13 +40,23 @@ public class PlayerController : MonoBehaviour {
         }
 
         if (Input.GetButtonDown("Attack")) {
-            m_Attacker.Attack(m_InputPlayer.directionSightVector, m_Attributes.attack);
+            m_Animator.SetBool("attacking", true);
+
         }
     }
 
     // Update is called once per frame
     void FixedUpdate() {
-        Vector2 velocityVector = new Vector2(horizontal, vertical) * m_Attributes.velocity;
-        m_RigidBody2D.velocity = velocityVector;
+        if (m_Animator.GetBool("attacking")) {
+            m_RigidBody2D.velocity = Vector2.zero;
+        } else {
+            Vector2 velocityVector = new Vector2(horizontal, vertical) * m_Attributes.velocity;
+            m_RigidBody2D.velocity = velocityVector;
+        }
+    }
+
+    public void AttackController() {
+        m_Attacker.Attack(m_InputPlayer.directionSightVector, m_Attributes.attack);
+        m_Animator.SetBool("attacking", false);
     }
 }
