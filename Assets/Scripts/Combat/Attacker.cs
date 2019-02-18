@@ -28,7 +28,7 @@ public class Attacker : MonoBehaviour {
         for (int i = 0 ; i < amountOfCollision ; i++) {
             Attacked newAttackedObject = attackColliders [i].gameObject.GetComponent<Attacked>();
             if(newAttackedObject != null) {
-                newAttackedObject.GetAttack();
+                newAttackedObject.GetAttack(attackDirection, damage);
             }
         }
     }
