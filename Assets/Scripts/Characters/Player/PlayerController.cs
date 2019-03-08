@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Attributes))]
 public class PlayerController : MonoBehaviour {
 
+    public Attributes m_Attributes;
     private InputPlayer m_InputPlayer;
     private Transform m_Transform;
     private Rigidbody2D m_RigidBody2D;
     private Animator m_Animator;
-    private Attributes m_Attributes;
     private Attacker m_Attacker;
 
     private float horizontal;
@@ -18,7 +17,6 @@ public class PlayerController : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-        m_Attributes = GetComponent<Attributes>();
         m_InputPlayer = GetComponent<InputPlayer>();
         m_Transform = GetComponent<Transform>();
         m_RigidBody2D = GetComponent<Rigidbody2D>();

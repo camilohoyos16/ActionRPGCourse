@@ -15,6 +15,7 @@ public class Attacker : MonoBehaviour {
 
     private void Start() {
         attackFilter.layerMask = attackLayer;
+        attackFilter.useLayerMask = true;
     }
 
     private void Update() {
