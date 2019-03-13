@@ -24,8 +24,11 @@ GameObject:
   - component: {fileID: 114320440050273330}
   - component: {fileID: 114256393525437748}
   - component: {fileID: 114287291417666918}
+  - component: {fileID: 114098682474779138}
   - component: {fileID: 50488203791217270}
   - component: {fileID: 70372460822404354}
+  - component: {fileID: 114102091601453402}
+  - component: {fileID: 114653241986373334}
   m_Layer: 8
   m_Name: Wizard
   m_TagString: Untagged
@@ -99,6 +102,33 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114098682474779138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800208504184254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d476cd3a1e1dbfc4e918bd7f26d00fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114102091601453402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800208504184254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a464483cffca9c74788ee93ba73c0e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1
+  hitBox: {x: 1, y: 1}
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &114256393525437748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +174,19 @@ MonoBehaviour:
   xp: 0
   sightDistance: 10
   attackDistance: 5
+  projectile: {fileID: 114081300807459982, guid: 67102a4cfe4d94148b5e4315e2299316,
+    type: 2}
+--- !u!114 &114653241986373334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1800208504184254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17baebf3b8c50e24e8d7c610fbd47832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212122665300679818
 SpriteRenderer:
   m_ObjectHideFlags: 1

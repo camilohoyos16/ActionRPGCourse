@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyInput))]
 public class EnemiesAI : Enemy
 {
-
+    protected Abilities m_Abilities;
     protected EnemyInput m_EnemyInput;
     private Attacker m_Attacker;
     protected SpriteRenderer m_Sprite;
@@ -24,6 +24,7 @@ public class EnemiesAI : Enemy
 
     private void Start()
     {
+        m_Abilities = GetComponent<Abilities>();
         m_Sprite = GetComponent<SpriteRenderer>();
         m_EnemyInput = GetComponent<EnemyInput>();
         m_Animator = GetComponent<Animator>();

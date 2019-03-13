@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Wizard : EnemiesAI {
 
+    public Projectile projectile;
+
     public override void EnemyAttack()
     {
-        Debug.Log("Attacking");
+        m_Abilities.FireProjectile(projectile, projectile.initialVelocity, m_EnemyInput.directionToPlayer, m_Attributes.attack);
     }
 
     protected override void FlipSprite()
