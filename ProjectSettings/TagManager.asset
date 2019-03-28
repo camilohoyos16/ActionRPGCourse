@@ -41,12 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Walls
+  - name: WallsTop
     uniqueID: 2824640471
+    locked: 0
+  - name: WallsBordersCollider
+    uniqueID: 1432584311
     locked: 0
   - name: Player
     uniqueID: 3541175505
     locked: 0
   - name: InteractiveObjects
     uniqueID: 944524661
+    locked: 0
+  - name: Environment
+    uniqueID: 861307605
+    locked: 0
+  - name: WallsDown
+    uniqueID: 1990365477
+    locked: 0
+  - name: WallsBordersWithoutCollider
+    uniqueID: 1649880487
     locked: 0
