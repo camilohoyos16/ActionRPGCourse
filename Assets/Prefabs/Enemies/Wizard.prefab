@@ -56,7 +56,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1800208504184254}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 2048
+  flashAttackVFX: {fileID: 0}
 --- !u!114 &114256393525437748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_Attributes: {fileID: 11400000, guid: 8efcd404765c06b48810f6c1f7e6255b, type: 2}
   enemyName: Charly
   xp: 0
+  spawnVFX: {fileID: 1531936406615276, guid: dc95cd94c97fb3d448e67bf43f402183, type: 2}
   sightDistance: 10
   attackDistance: 5
   projectile: {fileID: 114081300807459982, guid: 67102a4cfe4d94148b5e4315e2299316,
@@ -202,7 +204,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ef5778feffe85ea439bdba7d3e869275, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,7 +222,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 944524661
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 02130dd696d747a4fb37e81f270549bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

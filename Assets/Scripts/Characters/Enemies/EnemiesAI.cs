@@ -33,6 +33,7 @@ public class EnemiesAI : Enemy
         attackHash = Animator.StringToHash("attack");
         deathHash = Animator.StringToHash("death");
         GetEnemyName();
+        Instantiate(spawnVFX, transform);
     }
 
     private void Update()

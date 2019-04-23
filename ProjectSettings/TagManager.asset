@@ -62,3 +62,6 @@ TagManager:
   - name: WallsBordersWithoutCollider
     uniqueID: 1649880487
     locked: 0
+  - name: Text
+    uniqueID: 974913093
+    locked: 0

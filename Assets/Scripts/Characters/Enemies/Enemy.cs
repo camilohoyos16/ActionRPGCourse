@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
     public Attributes m_Attributes;
     public string enemyName;
     public int xp;
+    public GameObject spawnVFX;
 
     protected void GetEnemyName() {
         Debug.Log("Hello, Im " + enemyName);

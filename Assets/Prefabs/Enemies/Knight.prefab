@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044761900382932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41, y: 0.35, z: 0.031205375}
+  m_LocalPosition: {x: 4.08, y: -0.88, z: 0.031205375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55,7 +55,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1044761900382932}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -168,6 +168,8 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 2048
+  flashAttackVFX: {fileID: 1952661555900114, guid: 6eb0485cfbbd26245bddb231bb7a828f,
+    type: 2}
 --- !u!114 &114898032146992684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,6 +184,7 @@ MonoBehaviour:
   m_Attributes: {fileID: 11400000, guid: 56f54fc10d9f2d94eadfe5ee8d0a183b, type: 2}
   enemyName: Knight
   xp: 10
+  spawnVFX: {fileID: 1531936406615276, guid: dc95cd94c97fb3d448e67bf43f402183, type: 2}
   sightDistance: 6
   attackDistance: 2
 --- !u!212 &212753812546967610
@@ -199,7 +202,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d2ad9d442ea4d3343ba9b0e826f537e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +220,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 944524661
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2481172def6e4664da0bf52dc703bf10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

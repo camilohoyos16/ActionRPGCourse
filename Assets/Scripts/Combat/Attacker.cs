@@ -12,6 +12,7 @@ public class Attacker : MonoBehaviour {
     public LayerMask attackLayer;
     private Collider2D [] attackColliders = new Collider2D[12];
     private ContactFilter2D attackFilter;
+    public GameObject flashAttackVFX;
 
     private void Start() {
         attackFilter.layerMask = attackLayer;
@@ -30,7 +31,15 @@ public class Attacker : MonoBehaviour {
             Attacked newAttackedObject = attackColliders [i].gameObject.GetComponent<Attacked>();
             if(newAttackedObject != null) {
                 newAttackedObject.GetAttack(attackDirection, damage);
+                InstantiateFlashAttackEffect(newAttackedObject);
             }
+        }
+    }
+
+    private void InstantiateFlashAttackEffect(Attacked newAttackedObject)
+    {
+        if (flashAttackVFX != null) {
+            Instantiate(flashAttackVFX, newAttackedObject.transform);
         }
     }
 
