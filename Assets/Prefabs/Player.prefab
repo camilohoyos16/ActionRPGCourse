@@ -28,6 +28,8 @@ GameObject:
   - component: {fileID: 95514178593486184}
   - component: {fileID: 70416906502315030}
   - component: {fileID: 114913389090437074}
+  - component: {fileID: 114475915279575704}
+  - component: {fileID: 114842941676612766}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -43,7 +45,7 @@ Transform:
   m_GameObject: {fileID: 1420657600604366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.92, y: 0.38, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.8000001, y: 0.8000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -125,6 +127,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directionSightVector: {x: 0, y: 1}
+--- !u!114 &114475915279575704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1420657600604366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17baebf3b8c50e24e8d7c610fbd47832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114719027413225386
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,6 +154,21 @@ MonoBehaviour:
   attackLayer:
     serializedVersion: 2
     m_Bits: 256
+  flashAttackVFX: {fileID: 1952661555900114, guid: 4778ed0d3ae80274baab23058135b5ef,
+    type: 2}
+--- !u!114 &114842941676612766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1420657600604366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e60906b932bda46b0378dabe398ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TextBehaviour: {fileID: 114244380928575684, guid: b2aac3af848d50f4da24001fdbb563cf,
+    type: 2}
 --- !u!114 &114850206260375156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +212,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ef5778feffe85ea439bdba7d3e869275, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,7 +230,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -753791791
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 53f974863e6022a40862c1465b40f099, type: 3}
   m_Color: {r: 0.75294125, g: 0.75294125, b: 0.75294125, a: 1}

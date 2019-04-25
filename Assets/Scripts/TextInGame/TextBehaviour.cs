@@ -8,14 +8,13 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshPro))]
 public class TextBehaviour : MonoBehaviour
 {
-
     public float lifeTime = 1f;
     public float movementDistance = 2f;
     public float timeToFadeOut;
     public Color color;
     public float movementAmount;
+    public TextMeshPro textLabel;
 
-    private TextMeshPro textLabel;
     private bool isFading;
     private float currentDistance = 0f;
     private Vector3 verticalMovementVector;
@@ -39,7 +38,6 @@ public class TextBehaviour : MonoBehaviour
                 StartCoroutine(FadeOut());
             }
         }
-
     }
 
     private IEnumerator FadeOut()

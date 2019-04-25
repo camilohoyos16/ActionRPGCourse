@@ -7,16 +7,19 @@ public class Attacker : MonoBehaviour {
 
     public float range = 1;
     public Vector2 hitBox = new Vector2(1, 1);
+    public LayerMask attackLayer;
+    public GameObject flashAttackVFX;
+
     private Vector2 vectorRangeAttack;
     private Vector2 pointA, pointB;
-    public LayerMask attackLayer;
     private Collider2D [] attackColliders = new Collider2D[12];
     private ContactFilter2D attackFilter;
-    public GameObject flashAttackVFX;
+    private TextController m_TextController;
 
     private void Start() {
         attackFilter.layerMask = attackLayer;
         attackFilter.useLayerMask = true;
+        m_TextController = GetComponent<TextController>();
     }
 
     private void Update() {
@@ -32,7 +35,15 @@ public class Attacker : MonoBehaviour {
             if(newAttackedObject != null) {
                 newAttackedObject.GetAttack(attackDirection, damage);
                 InstantiateFlashAttackEffect(newAttackedObject);
+                CreateText(damage, newAttackedObject);
             }
+        }
+    }
+
+    private void CreateText(int damage, Attacked newAttackedObject)
+    {
+        if (m_TextController != null) {
+            m_TextController.CreateTextBehaviour(damage, newAttackedObject.transform, false);
         }
     }
 
