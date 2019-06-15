@@ -10,7 +10,7 @@ public class InputPlayer : MonoBehaviour {
     public bool attack { get; private set; }
     public bool ability1 { get; private set; }
     public bool ability2 { get; private set; }
-    public bool inventory { get; private set; }
+    public bool menu { get; private set; }
     public bool interact { get; private set; }
     [HideInInspector] public Vector2 directionSightVector;
 
@@ -23,7 +23,7 @@ public class InputPlayer : MonoBehaviour {
         attack = Input.GetButtonDown("Attack");
         ability1 = Input.GetButtonDown("Ability1");
         ability2 = Input.GetButtonDown("Ability2");
-        inventory = Input.GetButtonDown("Inventory");
+        menu = Input.GetButtonDown("Menu");
         interact = Input.GetButtonDown("Interact");
 
         //Axis

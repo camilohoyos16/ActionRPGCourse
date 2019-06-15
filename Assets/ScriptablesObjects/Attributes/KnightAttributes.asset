@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: KnightAttributes
   m_EditorClassIdentifier: 
   velocity: 1
-  attack: 1
+  attack: 2

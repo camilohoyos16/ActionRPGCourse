@@ -37,6 +37,10 @@ public class PlayerController : MonoBehaviour {
             m_Animator.SetBool(movingHashCode, false);
         }
 
+        if (m_InputPlayer.menu) {
+            MenuController.instance.ChangePanelState();
+        }
+
         if (Input.GetButtonDown("Attack")) {
             m_Animator.SetBool("attacking", true);
 
